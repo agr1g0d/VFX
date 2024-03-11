@@ -48,12 +48,12 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _FadeSpeed: 1
-    - _Metallic: 0
+    - _Metallic: 0.3
     - _NoiseSpeed: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
-    - _Smoothness: 1
+    - _Smoothness: 2.18
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
