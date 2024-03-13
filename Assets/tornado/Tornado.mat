@@ -41,17 +41,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.97
+    - _Alpha: -0.58
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Emission: 1.12
+    - _Emission: 0.7
     - _FresnelEmission: 2
-    - _FresnelPower: 1
+    - _FresnelPower: 2.99
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 2
-    - _Waves: 3
-    - _WavesSpeed: 1
+    - _Speed: 1
+    - _Waves: 5
+    - _WavesSpeed: 3
     m_Colors:
     - _Color: {r: 0, g: 0.7803922, b: 1, a: 1}
     - _FresnelColor: {r: 0.8156863, g: 0.3490196, b: 1, a: 1}
