@@ -61,8 +61,8 @@ Material:
     - _Waves: 3
     - _WavesSpeed: 3
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0.99999976, a: 1}
-    - _FresnelColor: {r: 1.0150404, g: 0, b: 1.4142135, a: 1}
+    - _Color: {r: 0, g: 0.5137255, b: 1, a: 1}
+    - _FresnelColor: {r: 0.7093712, g: 0, b: 0.98833734, a: 1}
     - _Tiling: {r: 1, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5587695102091384449
