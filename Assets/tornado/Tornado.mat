@@ -27,6 +27,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 97161b106b554bb40a656ca542c8cd99, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3d2d712fb5604ec78b8b2196142ebb07_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 059060e220ced594ab8eb6f0b711a552, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_7c650753dfc2488c8f583de6833c3d0b_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 25dc46818f02de94e8e5a35a9ff95cd4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -41,21 +49,21 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: -0.58
+    - _Alpha: 0.8
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Emission: 0.7
-    - _FresnelEmission: 2
-    - _FresnelPower: 2.99
+    - _Emission: 5
+    - _FresnelEmission: 18.68
+    - _FresnelPower: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 1
-    - _Waves: 5
+    - _Speed: 1.5
+    - _Waves: 3
     - _WavesSpeed: 3
     m_Colors:
-    - _Color: {r: 0, g: 0.7803922, b: 1, a: 1}
-    - _FresnelColor: {r: 0.8156863, g: 0.3490196, b: 1, a: 1}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 0, g: 1, b: 0.99999976, a: 1}
+    - _FresnelColor: {r: 1.0150404, g: 0, b: 1.4142135, a: 1}
+    - _Tiling: {r: 1, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5587695102091384449
 MonoBehaviour:
