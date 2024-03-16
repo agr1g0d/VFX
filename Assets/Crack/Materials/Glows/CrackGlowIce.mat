@@ -48,12 +48,12 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _FadeSpeed: 1
-    - _Metallic: 0.3
+    - _Metallic: 0.37
     - _NoiseSpeed: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 0
-    - _Smoothness: 2.18
+    - _Smoothness: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
@@ -62,7 +62,7 @@ Material:
     - _ZWriteControl: 0
     - _bellow: 1
     m_Colors:
-    - _Color: {r: 0.2028302, g: 0.9593602, b: 1, a: 1}
+    - _Color: {r: 0.23584902, g: 1.9167848, b: 2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &3341339780732656585
 MonoBehaviour:
