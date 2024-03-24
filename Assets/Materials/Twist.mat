@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-706712115507363832
+--- !u!114 &-8751173716159273121
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Steam
+  m_Name: Twist
   m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 748df8a6777317f41b1c62823b6193f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: fe2d4b88d415504448f6d8ef50a52723, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -101,7 +101,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Blend: 0
+    - _Blend: 2
     - _BlendModePreserveSpecular: 1
     - _BlendOp: 0
     - _BumpScale: 1
@@ -119,8 +119,8 @@ Material:
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0.1
-    - _DstBlend: 10
-    - _DstBlendAlpha: 10
+    - _DstBlend: 1
+    - _DstBlendAlpha: 1
     - _EnvironmentReflections: 1
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
