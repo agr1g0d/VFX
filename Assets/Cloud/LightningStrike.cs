@@ -10,17 +10,21 @@ public class LightningStrike : MonoBehaviour
     [SerializeField] List<ParticleSystem> _additionalEffects;
     [SerializeField] float _distortion;
     [SerializeField] float _fadeOut;
+    [SerializeField] float _repeat;
 
-    private void Start()
-    {
-        Strike();
-    }
+
+    private bool flag;
+
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if ((int) Time.time % _repeat == 0 && !flag) // calls every 3sec
         {
             Strike();
+            flag = true;
+        } else if ((int) Time.time % _repeat != 0)
+        {
+            flag = false;
         }
     }
 
