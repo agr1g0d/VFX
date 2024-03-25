@@ -5,16 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LightningStrike : MonoBehaviour
 {
-    private LineRenderer _lineRenderer;
     [SerializeField] Transform _target;
-    [SerializeField] ParticleSystem _additionalLightnings;
+    [SerializeField] List<LineRenderer> _additionalLightnings;
+    [SerializeField] List<ParticleSystem> _additionalEffects;
     [SerializeField] float _distortion;
     [SerializeField] float _fadeOut;
 
     private void Start()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
-        _lineRenderer.enabled = false;
         Strike();
     }
 
@@ -27,13 +25,37 @@ public class LightningStrike : MonoBehaviour
     }
 
     public void Strike()
-    {
-        _lineRenderer.enabled = true;
+    {       
+
         Vector3 path = _target.position - transform.position;
         Vector3[] positions = new Vector3[(int)path.magnitude * 2];
+        for (int i = 0; i < positions.Length; ++i)      //set positions of LR along its path
+        {
+            positions[i] = path * Mathf.InverseLerp(0, positions.Length-1, i); 
+        }
+
+        foreach (LineRenderer _line in _additionalLightnings)
+        {
+            _line.enabled = true;
+            Vector3[] distortedPositions = DistortPositions(positions, 
+                _additionalLightnings.IndexOf(_line) == 0);
+            _line.positionCount = distortedPositions.Length;
+            _line.SetPositions(distortedPositions);
+        }
+
+        foreach(ParticleSystem effect in _additionalEffects) //play all lightning effects
+        {
+            effect.transform.LookAt(_target);
+            effect.Play();
+        }
+        StartCoroutine(SmoothFadeOut());
+
+    }
+
+    Vector3[] DistortPositions(Vector3[] positions, bool distortLast) //function that makes break line effect
+    {
         for (int i = 0; i < positions.Length; ++i)
         {
-            positions[i] = path * Mathf.InverseLerp(0, positions.Length-1, i);
             if (i != 0 && i != positions.Length - 1) 
             {
                 positions[i] += new Vector3(Random.Range(-1f, 1f) * _distortion,
@@ -41,18 +63,23 @@ public class LightningStrike : MonoBehaviour
                     Random.Range(-1f, 1f) * _distortion);
             }
         }
-        _lineRenderer.positionCount = positions.Length;
-        _lineRenderer.SetPositions(positions);
-        _additionalLightnings.transform.LookAt(_target.position);
-        _additionalLightnings.Play();
-        StartCoroutine(SmoothFadeOut());
-
+        if (distortLast)
+        {
+            positions[positions.Length-1] += new Vector3(Random.Range(-1f, 1f) * _distortion,
+                    Random.Range(-1f, 1f) * _distortion,
+                    Random.Range(-1f, 1f) * _distortion);
+        }
+        return positions;
     }
 
-    IEnumerator SmoothFadeOut()
+    IEnumerator SmoothFadeOut()     // lightning fade out
     {
-        _lineRenderer.endColor = new Color(1, 1, 1, 1);
-        _lineRenderer.startColor = new Color(1, 1, 1, 1);
+        foreach (LineRenderer _line in _additionalLightnings)
+        {
+            _line.endColor = new Color(1, 1, 1, 1);
+            _line.startColor = new Color(1, 1, 1, 1);
+        }
+        
         yield return new WaitForSeconds(0.1f);
         for (float t = 1; t > 0; t -= Time.deltaTime * _fadeOut)
         {
@@ -60,11 +87,17 @@ public class LightningStrike : MonoBehaviour
             {
                 t = 0;
             }
-            _lineRenderer.endColor = new Color(1, 1, 1,t);
-            _lineRenderer.startColor = new Color(1, 1, 1,t);
+            foreach (LineRenderer _line in _additionalLightnings)
+            {
+                _line.endColor = new Color(1, 1, 1, t);
+                _line.startColor = new Color(1, 1, 1, t);
+            }
             yield return null;
         }
-        _lineRenderer.enabled = false;
+        foreach (LineRenderer _line in _additionalLightnings)
+        {
+            _line.enabled = false;
+        }
     }
 
 
