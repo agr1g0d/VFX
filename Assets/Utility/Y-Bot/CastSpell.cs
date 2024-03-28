@@ -6,6 +6,7 @@ public class CastSpell : MonoBehaviour
 {
     [SerializeField] LightningStrike _lightningStrike;
     [SerializeField] Crack[] _cracks;
+    [SerializeField] CastFireball _fireball;
 
     void CastCrack()
     {
@@ -18,5 +19,15 @@ public class CastSpell : MonoBehaviour
     void CastLightningStrike()
     {
         _lightningStrike.Strike();
+    }
+
+    void ChargeFireball()
+    {
+        _fireball.Charge();
+    }
+
+    void LaunchFireball()
+    {
+        _fireball.Launch();
     }
 }
