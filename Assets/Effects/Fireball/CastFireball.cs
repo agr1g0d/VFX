@@ -56,7 +56,7 @@ public class CastFireball : MonoBehaviour
         {
             effect.Play();
         }
-        _cameraShake.Shake(3f);
+        _cameraShake.Shake(1f);
         for (float f = 0.3f; f > 0; f -= Time.deltaTime)
         {
             float t = Mathf.InverseLerp(0, 0.5f, f);
