@@ -81,20 +81,20 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _alpfa: 0.309
-    - _cells_emission: 2
+    - _alpfa: 0.3
+    - _cells_emission: 3
     - _frensel: 2
     - _fresnel_emission: 1.5
     - _fresnel_power: 2
     - _multyplier: 3
-    - _noise_scalse: 80
-    - _offset: 0.2
-    - _rotation_speed: 1
-    - _speed: 0.05
+    - _noise_scalse: 100
+    - _offset: 0.25
+    - _rotation_speed: 0.5
+    - _speed: 0.1
     m_Colors:
     - _NoiseTiling: {r: 3, g: 3, b: 0, a: 0}
     - _cells_color: {r: 0.5051899, g: 0, b: 1, a: 1}
-    - _color: {r: 0, g: 0.50531864, b: 1, a: 1}
+    - _color: {r: 0.5235849, g: 0.6151313, b: 1, a: 1}
     - _frensel_color: {r: 0, g: 0.8789091, b: 1, a: 1}
     - _noise_tiling: {r: 3, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []
