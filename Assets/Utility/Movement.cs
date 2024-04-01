@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
     public float sensivity = 100f;
     public float speed = 2f;
-    void Start()
-    {
-        
-    }
+    public bool Shake {get; private set;} = true;
+    [SerializeField] Toggle _toggle;
+
 
     void Update()
     {
@@ -36,6 +36,14 @@ public class Movement : MonoBehaviour
             movement -= Vector3.up * speed * Time.deltaTime;
         }
         transform.Translate(movement);
+
+
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Shake = !Shake;
+            _toggle.isOn = Shake;
+        }
 
     }
 }

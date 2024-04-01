@@ -7,8 +7,16 @@ public class CameraShake : MonoBehaviour
     [SerializeField] Camera _camera;
     [SerializeField] float _lerpCoeff;
 
+    private Movement _movement;
+
+    private void Start()
+    {
+        _movement = FindObjectOfType<Movement>();
+    }
+
     public void Shake(float force)
     {
+        if (!_movement.Shake) return;
         StartCoroutine(addShake(force));
     }
 

@@ -81,7 +81,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _alpfa: 0.3
+    - _alpfa: 0.4
+    - _backface_darken: 0.2
     - _cells_emission: 3
     - _frensel: 2
     - _fresnel_emission: 1.5
@@ -94,7 +95,7 @@ Material:
     m_Colors:
     - _NoiseTiling: {r: 3, g: 3, b: 0, a: 0}
     - _cells_color: {r: 0.5051899, g: 0, b: 1, a: 1}
-    - _color: {r: 0.5235849, g: 0.6151313, b: 1, a: 1}
+    - _color: {r: 0, g: 0.284, b: 1, a: 1}
     - _frensel_color: {r: 0, g: 0.8789091, b: 1, a: 1}
     - _noise_tiling: {r: 3, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []

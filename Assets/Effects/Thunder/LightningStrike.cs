@@ -6,7 +6,7 @@ using UnityEngine;
 public class LightningStrike : MonoBehaviour
 {
     [SerializeField] Transform _target;
-    [SerializeField] List<LineRenderer> _additionalLightnings;
+    [SerializeField] List<LineRenderer> _lightnings;
     [SerializeField] List<ParticleSystem> _additionalEffects;
     [SerializeField] float _distortion;
     [SerializeField] float _fadeOut;
@@ -35,21 +35,7 @@ public class LightningStrike : MonoBehaviour
     public void Strike()
     {       
 
-        Vector3 path = _target.position - transform.position;
-        Vector3[] positions = new Vector3[(int)path.magnitude * 2];
-        for (int i = 0; i < positions.Length; ++i)      //set positions of LR along its path
-        {
-            positions[i] = path * Mathf.InverseLerp(0, positions.Length-1, i); 
-        }
-
-        foreach (LineRenderer _line in _additionalLightnings)
-        {
-            _line.enabled = true;
-            Vector3[] distortedPositions = DistortPositions(positions, 
-                _additionalLightnings.IndexOf(_line) == 0);
-            _line.positionCount = distortedPositions.Length;
-            _line.SetPositions(distortedPositions);
-        }
+        
 
         foreach(ParticleSystem effect in _additionalEffects) //play all lightning effects
         {
@@ -58,6 +44,7 @@ public class LightningStrike : MonoBehaviour
         }
         _cameraShake.Shake(5f);
         StartCoroutine(SmoothFadeOut());
+        StartCoroutine(distortSeveralTimes(3));
 
     }
 
@@ -83,7 +70,8 @@ public class LightningStrike : MonoBehaviour
 
     IEnumerator SmoothFadeOut()     // lightning fade out
     {
-        foreach (LineRenderer _line in _additionalLightnings)
+        
+        foreach (LineRenderer _line in _lightnings)
         {
             _line.endColor = new Color(1, 1, 1, 1);
             _line.startColor = new Color(1, 1, 1, 1);
@@ -96,17 +84,41 @@ public class LightningStrike : MonoBehaviour
             {
                 t = 0;
             }
-            foreach (LineRenderer _line in _additionalLightnings)
+            foreach (LineRenderer _line in _lightnings)
             {
                 _line.endColor = new Color(1, 1, 1, t);
                 _line.startColor = new Color(1, 1, 1, t);
             }
             yield return null;
         }
-        foreach (LineRenderer _line in _additionalLightnings)
+        foreach (LineRenderer _line in _lightnings)
         {
             _line.enabled = false;
         }
+    }
+
+    IEnumerator distortSeveralTimes(int n)
+    {
+        Vector3 path = _target.position - transform.position;
+        Vector3[] positions = new Vector3[(int)path.magnitude * 2];
+        for (int i = 0; i < positions.Length; ++i)      //set positions of LR along its path
+        {
+            positions[i] = path * Mathf.InverseLerp(0, positions.Length-1, i); 
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            foreach (LineRenderer _line in _lightnings)
+            {
+                _line.enabled = true;
+                Vector3[] distortedPositions = DistortPositions(positions, 
+                    _lightnings.IndexOf(_line) == 0);
+                _line.positionCount = distortedPositions.Length;
+                _line.SetPositions(distortedPositions);
+            }
+            yield return new WaitForSeconds(0.05f);
+        }
+        
     }
 
 

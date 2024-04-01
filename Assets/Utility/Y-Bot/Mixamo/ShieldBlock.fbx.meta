@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c299142c1b31714e8b408cc29c1ecd5
+guid: e793b6a29bd106b43b9b5af33edf91a4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ShieldHolding
+      name: ShieldBlock
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 15
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

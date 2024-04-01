@@ -23,6 +23,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _ParallaxOcclusionMapping_33e53741ea3948dd9731702581a510d4_Heightmap_2_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d8e089f00020353419accabc9e904a22, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texture:
         m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
