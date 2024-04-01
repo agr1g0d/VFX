@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shield
+  m_Name: SphericalShield
   m_Shader: {fileID: -6465566751694194690, guid: 30a5ddec5ccbb1e4982e4c92c6aa3726, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _shield_UV_texture:
-        m_Texture: {fileID: 2800000, guid: 23eca050ff85db64c910d2463bba4bc7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3262ee73b836c6b49885d43bc37a4203, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _shiels_UV_texture:
@@ -85,7 +85,7 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _alpfa: 0.4
+    - _alpfa: 0.2
     - _backface_darken: 0.2
     - _cells_emission: 5
     - _frensel: 2
@@ -93,13 +93,13 @@ Material:
     - _fresnel_power: 2
     - _multyplier: 3
     - _noise_scalse: 100
-    - _offset: 0.25
+    - _offset: 0.15
     - _rotation_speed: 0.5
-    - _speed: 0.1
+    - _speed: 0.2
     m_Colors:
     - _NoiseTiling: {r: 3, g: 3, b: 0, a: 0}
-    - _cells_color: {r: 0.5051899, g: 0, b: 1, a: 1}
-    - _color: {r: 0, g: 0.284, b: 1, a: 1}
-    - _frensel_color: {r: 0, g: 0.8789091, b: 1, a: 1}
+    - _cells_color: {r: 1, g: 0.00000016788641, b: 0, a: 1}
+    - _color: {r: 0.73839617, g: 0, b: 1, a: 1}
+    - _frensel_color: {r: 0, g: 0.3848107, b: 1, a: 1}
     - _noise_tiling: {r: 3, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []
