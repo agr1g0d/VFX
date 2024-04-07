@@ -39,11 +39,11 @@ Material:
     m_Floats:
     - _EmissionPower: 4
     - _EmissionWight: 0.1
-    - _Metallic: 1
+    - _Metallic: 0.876
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.579
-    - _alpha: 1
+    - _Smoothness: 0.332
+    - _alpha: 0.7780903
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 0.2888689, g: 0, b: 1, a: 1}
