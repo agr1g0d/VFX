@@ -940,7 +940,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"fileID\":6239881831769578202,\"guid\":\"e94916a11b8c8e34ca7d833faf1f5185\",\"type\":3}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":3148555587709668362,\"guid\":\"e94916a11b8c8e34ca7d833faf1f5185\",\"type\":3}}",
             "m_Guid": ""
         },
         "preventRotation": false
@@ -2836,8 +2836,8 @@
         "m_Id": "9d30513fba874dc9ae73466f86778c13"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
-    "m_ZTestMode": 4,
+    "m_SurfaceType": 0,
+    "m_ZTestMode": 2,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
     "m_RenderFace": 2,

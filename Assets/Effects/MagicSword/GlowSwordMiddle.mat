@@ -132,7 +132,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _alpha: 1
-    - _alpha_multiplier: 1.4
+    - _alpha_multiplier: 1.3
     - _alpha_speed: -0.5
     - _color_speed: 0.3
     - _emission: 1.6
