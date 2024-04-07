@@ -42,7 +42,7 @@ Material:
     - _Metallic: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.8
+    - _Smoothness: 0.579
     - _alpha: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
